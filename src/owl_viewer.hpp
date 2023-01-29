@@ -2,12 +2,13 @@
 #define OWL_VIEWER_HPP
 #pragma once
 
-// Standard includes
-#include <memory>
-
 // Third-party includes
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+// Standard includes
+#include <memory>
+#include <string>
 
 namespace ov
 {
@@ -16,6 +17,7 @@ namespace ov
     private:
         // GLFW window reference
         std::unique_ptr<GLFWwindow*> m_window;
+        std::string m_glsl_version = "#version 150";
     public:
         /**
          * @brief Construct a new Owl Viewer object
@@ -36,6 +38,10 @@ namespace ov
         // Non-moveable
         OwlViewer(OwlViewer&& other) = delete;
         OwlViewer& operator=(OwlViewer&& other) = delete;
+
+    private:
+        void CreateWindow();
+        void ToolbarUI();
     };
     
 } // namespace ov

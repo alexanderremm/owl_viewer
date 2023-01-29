@@ -17,6 +17,7 @@ add_dependencies(
     glm
     glad
     spdlog
+    ImGui
 )
 
 target_link_libraries(
@@ -26,4 +27,5 @@ target_link_libraries(
     glad
     OpenGL::GL
     spdlog
+    ImGui
 )

@@ -51,6 +51,9 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(glfw glm glad spdlog)
 
+# ImGui library
+add_subdirectory(src/extern/imgui)
+
 # =============================================================================
 # Main application
 # =============================================================================
